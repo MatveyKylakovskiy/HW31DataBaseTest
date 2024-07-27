@@ -8,7 +8,7 @@ namespace HW31DataBaseTest.Tests
         [Test]
         public void CRUDTest1()
         {
-            var group = GetGroup(2);
+            var group = GetGroup();
             var student = GetStudent(group);
 
             //checking connection

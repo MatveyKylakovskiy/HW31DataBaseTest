@@ -44,11 +44,11 @@ namespace HW31DataBaseTest.Methods
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                string query = $"INSERT INTO GroupList (Name, IdGroupList) VALUES ('{groupNumber}', '{groupNumber}')";
+                string query = $"INSERT INTO GroupList (Name, IdGroupList) VALUES ('{groupName}', '{groupNumber}')";
 
                 using (var command = new MySqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("Name", groupNumber);
+                    command.Parameters.AddWithValue("Name", groupName);
                     command.Parameters.AddWithValue("IdGroupList", groupNumber);
                     command.ExecuteNonQuery();
                 }

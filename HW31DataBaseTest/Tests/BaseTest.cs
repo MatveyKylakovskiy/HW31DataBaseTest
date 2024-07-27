@@ -29,10 +29,10 @@ namespace HW31DataBaseTest.Tests
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        public static GroupModel GetGroup(int groupID) => new()
+        public static GroupModel GetGroup() => new()
         {
             Name = RandomString(),
-            idGroupList = groupID
+            idGroupList = new Random().Next(0, 10)
         };
 
         public static StudentModel GetStudent(GroupModel group) => new()
